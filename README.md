@@ -21,7 +21,7 @@ node prometheus-exporter.js
 ## results
 
 Open this link
-http://localhost:9100/metrics/\<site_id>
+http://localhost:9100/metrics/<site_id>
 
 ## sample output
 
