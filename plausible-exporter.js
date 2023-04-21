@@ -46,9 +46,13 @@ export class PlausibleExporter {
             items.push(`${this.prefix}_stats_aggregate{site_id="${site_id}", key="${key}"} ${value?.value || 0}`)
           }
         }
-        resolve(items.join("\n"))
+        items.push(`${this.prefix}_up{site_id="${site_id}"} 1`)
       } catch (err) {
-        reject(err)
+        items.push(`${this.prefix}_up{site_id="${site_id}"} 0`)
+        // reject(err)
+        console.log(err)
+      } finally {
+        resolve(items.join("\n"))
       }
     })
   }
