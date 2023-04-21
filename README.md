@@ -1,5 +1,7 @@
 # plausible-prometheus-exporter
 
+A prometheus exporter for plausible (api) implemented in nodejs
+
 # get started
 
 ```bash
