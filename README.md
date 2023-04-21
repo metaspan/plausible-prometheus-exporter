@@ -13,6 +13,15 @@ cp .env.sample .env
 
 Edit .env file as required
 
+```env
+SITE_ID=<your site id>
+API_KEY=<your api key>
+PROTOCOL=http
+HOST=localhost
+PORT=80
+PREFIX=plausible
+```
+
 ```bash
 # run
 node prometheus-exporter.js
