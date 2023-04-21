@@ -25,6 +25,10 @@ pm2 start --name plausible-prometheus-exporter prometheus-exporter.js
 pm2 list
 ```
 
+# refs
+
+- https://plausible.io/docs/stats-api
+
 # Kudos, inspiration
 
 - https://github.com/riesinger/plausible-exporter
