@@ -16,6 +16,19 @@ Edit .env file as required
 node prometheus-exporter.js
 ```
 
+## sample output
+
+```prometheus
+plausible_realtime_visitors{site_id="metaspan.io"} 0
+plausible_stats_aggregate{site_id="metaspan.io", key="bounce_rate"} 50
+plausible_stats_aggregate{site_id="metaspan.io", key="events"} 9
+plausible_stats_aggregate{site_id="metaspan.io", key="pageviews"} 9
+plausible_stats_aggregate{site_id="metaspan.io", key="visit_duration"} 46
+plausible_stats_aggregate{site_id="metaspan.io", key="visitors"} 4
+plausible_stats_aggregate{site_id="metaspan.io", key="visits"} 4
+plausible_up{site_id="metaspan.io"} 1
+```
+
 # PM2
 
 Launch the process with pm2
