@@ -18,6 +18,11 @@ Edit .env file as required
 node prometheus-exporter.js
 ```
 
+## results
+
+Open this link
+http://localhost:9100/metrics/\<site_id>
+
 ## sample output
 
 ```prometheus
@@ -29,6 +34,17 @@ plausible_stats_aggregate{site_id="metaspan.io", key="visit_duration"} 46
 plausible_stats_aggregate{site_id="metaspan.io", key="visitors"} 4
 plausible_stats_aggregate{site_id="metaspan.io", key="visits"} 4
 plausible_up{site_id="metaspan.io"} 1
+```
+
+## configure prometheus
+
+```yml
+  - job_name: "plausible"
+    scrape_interval: 60s
+    metrics_path: "/metrics/<site_id>"
+    static_configs:
+    - targets: ["10.10.10.10:9100"]
+
 ```
 
 # PM2
