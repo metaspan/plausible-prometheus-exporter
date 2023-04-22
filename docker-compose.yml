@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  plausible-prometheus-exporter:
+    container_name: plausible-exporter
+    # image: node:18-slim
+    image: plausible-exporter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # these values below come from .env
+    environment:
+      - SITE_ID=$SITE_ID
+      - API_KEY=$API_KEY
+      - PROTOCOL=$PROTOCOL
+      - HOST=$HOST
+      - PORT=$PORT
+      - PREFIX=$PREFIX
+    ports:
+      - "9100:9100"
